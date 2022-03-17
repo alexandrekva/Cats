@@ -9,7 +9,6 @@ import com.example.cats.feature_cats.data.remote.dto.Data
 import com.example.cats.feature_cats.domain.use_cases.GetCatImages
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
