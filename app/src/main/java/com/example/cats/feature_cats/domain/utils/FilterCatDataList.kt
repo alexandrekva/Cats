@@ -2,7 +2,7 @@ package com.example.cats.feature_cats.domain.utils
 
 import com.example.cats.feature_cats.data.remote.dto.Data
 
-class FilterCatImages {
+class FilterCatDataList {
     companion object {
         fun onlyImages(list: List<Data>): List<Data> {
             return list.filter { data ->

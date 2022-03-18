@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.cats.core.util.Resource
 import com.example.cats.feature_cats.data.remote.dto.Data
 import com.example.cats.feature_cats.domain.use_cases.GetCatImages
-import com.example.cats.feature_cats.domain.utils.FilterCatImages
+import com.example.cats.feature_cats.domain.utils.FilterCatDataList
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.launch
@@ -40,7 +40,7 @@ class CatsViewModel @Inject constructor(private val getCatImages: GetCatImages) 
 
                     is Resource.Success -> {
                         response.data?.let {
-                            val filtered = FilterCatImages.onlyImages(it.data)
+                            val filtered = FilterCatDataList.onlyImages(it.data)
                             cats.addAll(filtered) }
                         isLoading.value = false
                     }
